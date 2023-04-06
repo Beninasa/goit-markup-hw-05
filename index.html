@@ -32,15 +32,19 @@
           >
           <ul class="header-nav-list list">
             <li class="header-nav-items">
-              <a class="header-nav-link link" href="./index.html">Studio</a>
+              <a
+                class="header-nav-link link-items active-menu"
+                href="./index.html"
+                >Studio</a
+              >
             </li>
             <li class="header-nav-items">
-              <a class="header-nav-link link" href="./portfolio.html"
+              <a class="header-nav-link link-items" href="./portfolio.html"
                 >Portfolio</a
               >
             </li>
             <li class="header-nav-items">
-              <a class="header-nav-link link" href="">Contacts</a>
+              <a class="header-nav-link link-items" href="">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -48,13 +52,13 @@
           <ul class="header-contact-list list">
             <li class="header-contact-item">
               <a
-                class="header-contact-link link"
+                class="header-contact-link link-items"
                 href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-            <li class="header-contact-item">
-              <a class="header-contact-link link" href="tel:+110001111111"
+            <li class="header-contact-items">
+              <a class="header-contact-link link-items" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
             </li>
@@ -68,7 +72,7 @@
       <section class="hero">
         <div class="container hero-container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-button button" type="button">
+          <button class="hero-button button" data-modal-open type="button">
             Order Service
           </button>
         </div>
@@ -82,7 +86,7 @@
           <ul class="technology-list list">
             <li class="technology-list-items">
               <div class="technology-block-icon">
-                <svg class="technology-icon" wight="64" height="64">
+                <svg class="technology-icon" width="64" height="64">
                   <use href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
@@ -94,7 +98,7 @@
             </li>
             <li class="technology-list-items list">
               <div class="technology-block-icon">
-                <svg class="technology-icon" wight="64" height="64">
+                <svg class="technology-icon" width="64" height="64">
                   <use href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
@@ -106,7 +110,7 @@
             </li>
             <li class="technology-list-items list">
               <div class="technology-block-icon">
-                <svg class="technology-icon" wight="64" height="64">
+                <svg class="technology-icon" width="64" height="64">
                   <use href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
@@ -118,7 +122,7 @@
             </li>
             <li class="technology-list-items list">
               <div class="technology-block-icon">
-                <svg class="technology-icon" wight="64" height="64">
+                <svg class="technology-icon" width="64" height="64">
                   <use href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
@@ -352,42 +356,42 @@
         <h2 class="customers-tittle">Customers</h2>
         <ul class="customers-list list">
           <li class="customers-item">
-            <a class="customers-link link" href="">
+            <a class="customers-link link-items" href="">
               <svg class="customers-icon" height="56" width="104">
                 <use href="./images/icons.svg#icon-customers-1"></use>
               </svg>
             </a>
           </li>
           <li class="customers-item">
-            <a class="customers-link link" href="">
+            <a class="customers-link link-items" href="">
               <svg class="customers-icon" height="56" width="104">
                 <use href="./images/icons.svg#icon-customers-2"></use>
               </svg>
             </a>
           </li>
           <li class="customers-item">
-            <a class="customers-link link" href="">
+            <a class="customers-link link-items" href="">
               <svg class="customers-icon" height="56" width="104">
                 <use href="./images/icons.svg#icon-customers-3"></use>
               </svg>
             </a>
           </li>
           <li class="customers-item">
-            <a class="customers-link link" href="">
+            <a class="customers-link link-items" href="">
               <svg class="customers-icon" height="56" width="104">
                 <use href="./images/icons.svg#icon-customers-4"></use>
               </svg>
             </a>
           </li>
           <li class="customers-item">
-            <a class="customers-link link" href="">
+            <a class="customers-link link-items" href="">
               <svg class="customers-icon" height="56" width="104">
                 <use href="./images/icons.svg#icon-customers-5"></use>
               </svg>
             </a>
           </li>
           <li class="customers-item">
-            <a class="customers-link link" href="">
+            <a class="customers-link link-items" href="">
               <svg class="customers-icon" height="56" width="104">
                 <use href="./images/icons.svg#icon-customers-6"></use>
               </svg>
@@ -445,5 +449,16 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" data-modal-close class="modal-button-close">
+          <svg class="modal-button-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
