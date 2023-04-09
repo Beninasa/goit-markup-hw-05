@@ -402,15 +402,13 @@ body {
   display: flex;
   justify-content: center;
   margin: auto;
-  width: calc((100% - 120px) / 6);
   gap: 24px;
 }
 
 .customers-item {
   min-width: 168px;
   min-height: 88px;
-  border: 1px solid var(--light-slate);
-  border-radius: 4px;
+  width: calc((100% - 120px) / 6);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -421,15 +419,18 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--light-slate);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--light-slate);
+  border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon {
   fill: currentColor;
 }
 
-.customers-item:hover,
-.customers-item:focus {
+.customers-link:hover,
+.customers-link:focus {
   color: var(--ocean);
   border-color: var(--ocean);
 }
@@ -530,7 +531,7 @@ body {
 .buttons-list-name:hover,
 .buttons-list-name:focus {
   color: var(--white);
-  background: var(--ocean);
+  background-color: var(--ocean);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-color: transparent;
@@ -550,7 +551,7 @@ body {
   border: 1px solid var(--cornflower);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -643,9 +644,9 @@ body {
 }
 
 .modal {
-  width: 488px;
+  width: 408px;
   min-height: 576px;
-  background-color: #ffffff;
+  background-color: var(--white);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -662,13 +663,25 @@ body {
 }
 
 .modal-button-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
-  border: 1px solid var(--cornflower);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
   border-radius: 50%;
   display: block;
   margin-left: auto;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button-close:focus,
+.modal-button-close:hover {
+  background-color: var(--ocean);
+  fill: var(--white);
 }
 
 .modal-button-close-icon {
@@ -676,7 +689,6 @@ body {
   align-items: center;
   justify-content: center;
   margin: auto;
-  fill: var(--navy-blue);
   background-color: transparent;
 }
 
